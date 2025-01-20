@@ -1,3 +1,5 @@
-const { printName, lastName } = require("./printName")
+const os = require("os")
 
-printName(`Cauê ${lastName}`);
+os.type()
+
+console.log(os.type())
