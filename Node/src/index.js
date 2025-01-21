@@ -1,16 +1,19 @@
 const http = require('http')
-const Controller = require('../src/Controller/endpointUsersGET')
+const routes = require('../src/Routes/Routes')
 
 const server = http.createServer((request, response) => {
     console.log(`Method: ${request.method} | endpoint: ${request.url}`)
 
-    if(request.method === 'GET' && request.url === '/users') {
-        Controller.users(request, response)
-    } else {
-        response.writeHead(404, { 'Content-Type': 'text/html' });
-        response.end(`Cannot ${request.method} ${request.url}`)
-    }
+    const route = routes.find((endpoint) => (
+        endpoint.method === request.method && endpoint.endpoint === request.url
+    ))
 
+    if(route) {
+        route.handler(request, response)
+    } else {
+        response.writeHead(404, { 'Content-Type': 'text/html' })
+        response.end(`<p>Cannot ${request.method} ${request.url}</p>`)
+    }
     
 })
 

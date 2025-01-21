@@ -1,7 +1,9 @@
+const Controller = require('../Controller/endpointUsersGET')
+
 module.exports = [
     {
-        endpoint: 'GET',
-        method: '/users',
-        handler: 
+        method: 'GET',
+        endpoint: '/users',
+        handler: Controller.users,
     }
 ]
