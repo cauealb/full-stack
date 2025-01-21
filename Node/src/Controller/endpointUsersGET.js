@@ -55,8 +55,31 @@ module.exports = {
         users = users.filter((item) => {
             return item.id != idNumber
         })
-        
+
         response.send(200, users)
 
+    },
+
+    alterUser(request, response) {
+        let { id } = request.params
+        const body = request.body
+        id = Number(id)
+
+        const existId = users.find((item) => item.id === id)
+        if(!existId) {
+            return response.send(400, { error: 'Cannot found id user' })
+        }
+
+        users = users.map((item) => {
+            if(item.id === id) {
+                return {
+                    ...item,
+                    Name: body.Name  
+                }
+            } 
+            return item
+        })
+
+        response.send(200, users)
     }
 }

@@ -20,5 +20,10 @@ module.exports = [
         method: 'DELETE',
         endpoint: '/users/:id',
         handler: Controller.deleteUser,
+    },
+    {
+        method: 'PUT',
+        endpoint: '/users/:id',
+        handler: Controller.alterUser,
     }
 ]

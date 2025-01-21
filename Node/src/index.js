@@ -29,6 +29,7 @@ const server = http.createServer((request, response) => {
         }
 
         if(['PUT', 'POST', 'PATH'].includes(request.method)){
+            console.log('entrou')
             UseParse(request, () => route.handler(request, response))
         } else{
             route.handler(request, response)

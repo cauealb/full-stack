@@ -8,6 +8,7 @@ function UseParse(request, callback) {
     request.on('end', () => {
         body = JSON.parse(body)
         request.body = body
+        console.log(request.body)
         callback();
     })
 }
