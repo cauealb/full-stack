@@ -27,5 +27,27 @@ module.exports = {
 
         response.send(404, { error: 'Cannot find user' })
 
+    },
+
+    createUser(request, response) {
+        let body = ''
+
+        request.on('data', (chunck) => {
+            body += chunck
+        })
+
+        request.on('end', () => {
+            body = JSON.parse(body)
+            const lastUserId = users.length - 1
+            
+            const newArray = {
+                id: lastUserId + 1,
+                Name: body.Name 
+            }
+            users.push(newArray)
+
+            response.send(200, newArray)
+        })
+
     }
 }
