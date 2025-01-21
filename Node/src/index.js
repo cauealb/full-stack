@@ -1,12 +1,11 @@
-const http = require('http');
-const users = require('../src/users')
+const http = require('http')
+const Controller = require('../src/Controller/endpointUsersGET')
 
 const server = http.createServer((request, response) => {
     console.log(`Method: ${request.method} | endpoint: ${request.url}`)
 
     if(request.method === 'GET' && request.url === '/users') {
-        response.writeHead(200, { 'Content-Type': 'application/json' })
-        response.end(JSON.stringify(users))
+        Controller.users(request, response)
     } else {
         response.writeHead(404, { 'Content-Type': 'text/html' });
         response.end(`Cannot ${request.method} ${request.url}`)
