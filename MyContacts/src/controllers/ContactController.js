@@ -1,6 +1,11 @@
+const ContactsRepositories = require('../repositories/ContactsRepositories')
+
 class ContactController {
-    index(request, response) {
-        response.send('Você entrou na rota de get!!')
+    async index(request, response) {
+        const contacts = await ContactsRepositories.findAll()
+
+        response.json(contacts)
+        
     }
 
     show() {
