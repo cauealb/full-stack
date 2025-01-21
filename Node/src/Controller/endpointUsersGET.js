@@ -15,5 +15,28 @@ module.exports = {
 
         response.writeHead(200, { 'Content-Type': 'application/json' }),
         response.end(JSON.stringify(arrayUsers))
+    },
+
+    getUserByid(request, response){
+        const { id } = request.params
+
+        const user = users.find((item) => item.id === Number(id))
+        console.log(user)
+        // console.log
+
+        if(user) {
+            response.writeHead(200, { 'Content-Type': 'application/json' });
+            response.end(JSON.stringify(user))
+        } else {
+            response.writeHead(404, { 'Content-Type': 'application/json'});
+            response.end(JSON.stringify({ error: 'Cannot find user' }))
+        }
+    
+        // if(user) {
+        // } else {
+        //     response.writeHead(404, { 'Content-Type': 'application/json' });
+        //     response.end({ error: 'Cannot find user' })
+        // }
+
     }
 }
