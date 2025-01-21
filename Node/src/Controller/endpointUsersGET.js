@@ -1,4 +1,4 @@
-const users = require('../users')
+let users = require('../users')
 
 module.exports = {
     users(request, response) {
@@ -31,7 +31,7 @@ module.exports = {
 
     createUser(request, response) {
         const { body } = request
-        const lastUserId = users.length - 1
+        const lastUserId = users[users.length - 1].id
         const newArray = {
             id: lastUserId + 1,
             Name: body.Name 
@@ -40,5 +40,23 @@ module.exports = {
         console.log(newArray)
         users.push(newArray)
         response.send(200, newArray)
+    },
+
+    deleteUser(request, response) {
+        const { id } = request.params
+        const idNumber = Number(id)
+
+        const exitsID = users.find((item) => item.id === idNumber)
+
+        if(!exitsID) {
+            return response.send(400, { error: 'Cannot find user' })
+        }
+
+        users = users.filter((item) => {
+            return item.id != idNumber
+        })
+        
+        response.send(200, users)
+
     }
 }
