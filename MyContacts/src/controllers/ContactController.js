@@ -29,8 +29,19 @@ class ContactController {
         // Alterar um registro
     }
 
-    delete() {
+    async delete(request, response) {
         // Deleter um registro
+        const { id } = request.params
+
+        const contacts = await ContactsRepositories.findById(id)
+
+        if(!contacts) {
+            return response.status(404).json({error: 'Cannot find contact'})
+        }
+
+        await ContactsRepositories.delete(id)
+
+        response.sendStatus(204)
     }
 }
 
