@@ -48,21 +48,19 @@ class ContactController {
         const { name, email, phone, category_id } = request.body
 
         const existId = await ContactsRepositories.findById(id);
-        console.log(id, existId)
         if(!existId) {
             return response.status(404).json({error: 'Cannot find id'})
         }
 
         const existEmail = await ContactsRepositories.findByEmail(email)
-        console.log(existEmail)
         if(existEmail && existEmail.id != id){
-            return response.status(404).json({error: 'Cannot find email'})
+            return response.status(404).json({error: 'E-mail in use'})
         }
-
+        
         const contact = await ContactsRepositories.update(id, {
             name, email, phone, category_id
         })
-
+        
         response.status(200).json(contact)
     }
 

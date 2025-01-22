@@ -86,8 +86,9 @@ class ContactRepositores {
             }
 
             contacts = contacts.map((item) => {
-                item.id === id ? updateContact : item
+                return item.id === id ? updateContact  : item
             })
+
             resolve(updateContact)
         })
     }

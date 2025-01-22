@@ -1,4 +1,4 @@
-const { Router, response } = require('express')
+const { Router } = require('express')
 const ContactController = require('./controllers/ContactController')
 
 const route = Router()
