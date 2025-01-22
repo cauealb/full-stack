@@ -21,8 +21,21 @@ class ContactController {
         return response.status(200).json(contacts)
     }
 
-    store() {
+    async store(request, response) {
         // Criar um registro
+        const { name, email, phone, category_id } = request.body
+
+        const existEmail = await ContactsRepositories.findByEmail(email)
+
+        if(!existEmail) {
+            return response.status(404).json({ error: 'Cannot find E-mail' })
+        }
+
+        const contact = await ContactsRepositories.create({
+            name, email, phone, category_id
+        })
+
+        response.status(200).json(contact)
     }
 
     update() {
