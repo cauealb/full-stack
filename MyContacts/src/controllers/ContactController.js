@@ -25,10 +25,14 @@ class ContactController {
         // Criar um registro
         const { name, email, phone, category_id } = request.body
 
+        if(!name) {
+            return response.status(400).json({error: 'Name is required'})
+        }
+
         const existEmail = await ContactsRepositories.findByEmail(email)
 
-        if(!existEmail) {
-            return response.status(404).json({ error: 'Cannot find E-mail' })
+        if(existEmail) {
+            return response.status(404).json({ error: 'E-mail is in use' })
         }
 
         const contact = await ContactsRepositories.create({

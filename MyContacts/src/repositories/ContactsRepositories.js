@@ -46,10 +46,32 @@ class ContactRepositores {
         })
     }
 
+    async findByEmail(email) {
+        return new Promise((resolve) => {
+            return resolve(
+                contacts.find((item) => item.email === email)
+            )
+        })
+    }
+
     async delete(id) {
         return new Promise((resolve) => {
             contacts = contacts.filter((item) => item.id != id)
             resolve();
+        })
+    }
+
+    async create({ name, email, phone, category_id }) {
+        return new Promise((resolve) => {
+            const newContacts = {
+                id: v4(),
+                name,
+                email,
+                phone,
+                category_id
+            }
+            contacts.push(newContacts)
+            resolve(newContacts)
         })
     }
 }
