@@ -42,8 +42,28 @@ class ContactController {
         response.status(200).json(contact)
     }
 
-    update() {
+    async update(request, response) {
         // Alterar um registro
+        const { id } = request.params
+        const { name, email, phone, category_id } = request.body
+
+        const existId = await ContactsRepositories.findById(id);
+        console.log(id, existId)
+        if(!existId) {
+            return response.status(404).json({error: 'Cannot find id'})
+        }
+
+        const existEmail = await ContactsRepositories.findByEmail(email)
+        console.log(existEmail)
+        if(existEmail && existEmail.id != id){
+            return response.status(404).json({error: 'Cannot find email'})
+        }
+
+        const contact = await ContactsRepositories.update(id, {
+            name, email, phone, category_id
+        })
+
+        response.status(200).json(contact)
     }
 
     async delete(request, response) {
