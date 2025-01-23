@@ -34,10 +34,9 @@ let contacts = [
 ]
 
 class ContactRepositores {
-    findAll() {
-        return new Promise((resolve) => {
-            return resolve(contacts)
-        })
+    async findAll() {
+        const rows = db.query("SELECT * FROM contacts")
+        return rows;
     }
 
     async findById(id) {
