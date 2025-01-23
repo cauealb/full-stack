@@ -45,11 +45,8 @@ class ContactRepositores {
     }
 
     async findByEmail(email) {
-        return new Promise((resolve) => {
-            return resolve(
-                contacts.find((item) => item.email === email)
-            )
-        })
+        const [row] = await db.query("SELECT * FROM contacts WHERE email = $1", [email])
+        return row;
     }
 
     async delete(id) {
