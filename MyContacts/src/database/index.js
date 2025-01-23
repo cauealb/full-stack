@@ -10,7 +10,7 @@ const dt = new Client({
 
 dt.connect()
 
-exports.module = async (query) => {
-    const { rows } = await dt.query(query);
+exports.query = async (query, values) => {
+    const { rows } = await dt.query(query, values);
     return rows;
 }
