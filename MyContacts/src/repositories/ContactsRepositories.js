@@ -35,16 +35,13 @@ let contacts = [
 
 class ContactRepositores {
     async findAll() {
-        const rows = db.query("SELECT * FROM contacts")
+        const rows = await db.query("SELECT * FROM contacts")
         return rows;
     }
 
     async findById(id) {
-        return new Promise((resolve) => {
-            return resolve(
-                contacts.find((item) => item.id === id)
-            )
-        })
+        const [row] = await db.query("SELECT * FROM contacts WHERE id = $1", [id])
+        return row;
     }
 
     async findByEmail(email) {
