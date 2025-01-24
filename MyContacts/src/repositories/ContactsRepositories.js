@@ -70,7 +70,11 @@ class ContactRepositores {
     }
 
     async delete(id) {
-        const [row] = 
+        const [row] = await db.query(`
+        DELETE FROM contacts
+        WHERE id = $1 
+        `, [id])
+        return row
     }
 }
 
