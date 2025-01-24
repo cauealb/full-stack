@@ -1,3 +1,5 @@
+const CategoryRepositories = require('../repositories/CategoryRepositories')
+
 class CategoryController {
     index(request, response) {
 
