@@ -7,7 +7,7 @@ class CategoryController {
 
     async create({ name }) {
         const [row] = await db.query(`
-        INSERT INTO(name)
+        INSERT INTO category(name)
         VALUES($1)
         RETURNING * 
         `, [name])
