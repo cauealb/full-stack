@@ -3,7 +3,7 @@ const ContactsRepositories = require('../repositories/ContactsRepositories')
 class ContactController {
     async index(request, response) {
         const { orderBy } = request.query;
-        console.log(orderBy)
+
         const contacts = await ContactsRepositories.findAll(orderBy)
 
         response.json(contacts)
