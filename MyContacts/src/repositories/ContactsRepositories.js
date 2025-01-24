@@ -34,8 +34,9 @@ let contacts = [
 ]
 
 class ContactRepositores {
-    async findAll() {
-        const rows = await db.query("SELECT * FROM contacts")
+    async findAll(orderBy = 'ASC') {
+        const distination = orderBy.toUpperCase() === 'DESC' ? 'DESC' : 'ASC'
+        const rows = await db.query(`SELECT * FROM contacts ORDER BY name ${distination}`)
         return rows;
     }
 
