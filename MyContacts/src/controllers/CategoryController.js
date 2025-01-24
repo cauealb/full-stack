@@ -4,7 +4,9 @@ class CategoryController {
     }
 
     store(request, response) {
-        
+
     }
 
 }
+
+module.exports = new CategoryController();
