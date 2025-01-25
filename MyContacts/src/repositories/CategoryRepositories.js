@@ -19,11 +19,14 @@ class CategoryController {
         return row;
     }
 
-    update(id, name) {
-        // const [row] = db.query(`
-        // UPDATE category
-        // SET name =     
-        // `)
+    async update(name, id) {
+        const [row] = await db.query(`
+        UPDATE category
+        SET name = $1
+        WHERE id = $2
+        RETURNING *    
+        `, [name, id])
+        return row;
     }
 
     delete() {

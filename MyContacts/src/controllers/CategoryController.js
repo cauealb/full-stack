@@ -25,8 +25,8 @@ class CategoryController {
         if(!name) {
             return response.status(400).json({ error: 'Name is required' })
         }
-        
-        const category = await CategoryRepositories.update(id, name);
+
+        const category = await CategoryRepositories.update(name, id);
         response.status(200).json(category)
     }
 
