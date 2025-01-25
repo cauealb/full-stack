@@ -18,8 +18,11 @@ class CategoryController {
         response.status(200).json(category)
     }
 
-    update(request, response) {
+    async update(request, response) {
+        const { id } = request.params;
 
+        const category = await CategoryRepositories.update(id);
+        response.status(200).json(category)
     }
 
     delete(request, response) {
