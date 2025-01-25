@@ -6,14 +6,20 @@ class ContactRepositores {
         const rows = await db.query(`
         SELECT contacts.*, category.name AS category_name 
         FROM contacts 
-        JOIN category ON category.id = contacts.category_id
+        LEFT JOIN category ON category.id = contacts.category_id
         ORDER BY contacts.name 
         ${distination}`)
         return rows;
     }
 
     async findById(id) {
-        const [row] = await db.query("SELECT * FROM contacts WHERE id = $1", [id])
+        const [row] = await db.query(
+        `SELECT contacts.*, category.name AS category_name 
+        FROM contacts
+        LEFT JOIN category ON category.id = contacts.category_id 
+        WHERE contacts.id = $1`
+        
+        , [id])
         return row;
     }
 
