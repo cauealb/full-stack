@@ -1,8 +1,13 @@
 const db = require('../database')
 
 class CategoryController {
-    findAll() {
-
+    async findAll(orderBy = 'ASC') {
+        const distination = orderBy.toUpperCase() === 'DESC' ? 'DESC' : 'ASC'
+        const rows = await db.query(`
+        SELECT * FROM category
+        ORDER BY name ${distination};
+        `)
+        return rows;
     }
 
     async create({ name }) {
@@ -11,7 +16,7 @@ class CategoryController {
         VALUES($1)
         RETURNING * 
         `, [name])
-        return row
+        return row;
     }
 }
 
