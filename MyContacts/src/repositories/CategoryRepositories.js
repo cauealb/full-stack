@@ -36,8 +36,11 @@ class CategoryController {
         `, [id])
     }
 
-    findById(id) {
-
+    async findById(id) {
+        const [row] = await db.query(`
+        SELECT * FROM category WHERE id = $1    
+        `, [id])
+        return row;
     }
 }
 
