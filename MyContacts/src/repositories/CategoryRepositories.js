@@ -29,8 +29,11 @@ class CategoryController {
         return row;
     }
 
-    delete() {
-
+    async delete(id) {
+        await db.query(`
+        DELETE FROM category
+        WHERE id = $1    
+        `, [id])
     }
 }
 

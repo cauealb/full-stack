@@ -33,7 +33,7 @@ class CategoryController {
     async delete(request, response) {
         const { id } = request.params;
         await CategoryRepositories.delete(id);
-        response.sendstatus(204)
+        response.sendStatus(204)
     }
 }
 
