@@ -35,6 +35,10 @@ class CategoryController {
         WHERE id = $1    
         `, [id])
     }
+
+    findById(id) {
+
+    }
 }
 
 module.exports = new CategoryController()

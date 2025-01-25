@@ -35,6 +35,13 @@ class CategoryController {
         await CategoryRepositories.delete(id);
         response.sendStatus(204)
     }
+
+    async findById(request, response) {
+        const { id } = request.params;
+
+        const category = await CategoryRepositories.findById(id);
+        response.status(200).json(category)
+    }
 }
 
 module.exports = new CategoryController();
