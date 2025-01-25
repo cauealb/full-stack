@@ -18,6 +18,14 @@ class CategoryController {
         `, [name])
         return row;
     }
+
+    update() {
+
+    }
+
+    delete() {
+        
+    }
 }
 
 module.exports = new CategoryController()
