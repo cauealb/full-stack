@@ -19,12 +19,15 @@ class CategoryController {
         return row;
     }
 
-    update() {
-
+    update(id, name) {
+        // const [row] = db.query(`
+        // UPDATE category
+        // SET name =     
+        // `)
     }
 
     delete() {
-        
+
     }
 }
 
