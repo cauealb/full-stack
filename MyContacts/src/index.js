@@ -1,4 +1,5 @@
 const express = require('express');
+require('express-async-errors')
 const route = require('../src/rotes')
 const app = express();
 
