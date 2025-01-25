@@ -18,6 +18,13 @@ class CategoryController {
         response.status(200).json(category)
     }
 
+    update(request, response) {
+
+    }
+
+    delete(request, response) {
+
+    }
 }
 
 module.exports = new CategoryController();
