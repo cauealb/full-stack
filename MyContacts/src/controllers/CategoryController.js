@@ -30,8 +30,10 @@ class CategoryController {
         response.status(200).json(category)
     }
 
-    delete(request, response) {
-
+    async delete(request, response) {
+        const { id } = request.params;
+        const category = await CategoryRepositories.delete(id);
+        response.sendstatus(204)
     }
 }
 
