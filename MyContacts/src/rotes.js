@@ -12,7 +12,7 @@ route.put('/contacts/:id', ContactController.update)
 
 route.get('/categories', CategoryController.index)
 route.post('/categories', CategoryController.store)
-route.put('/categories/:id');
-route.delete('/categories/:id');
+route.put('/categories/:id', CategoryController.update);
+route.delete('/categories/:id', CategoryController.delete);
 
 module.exports = route
