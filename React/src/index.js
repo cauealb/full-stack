@@ -1,7 +1,7 @@
 import React from  'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 
-ReactDOM.render(
-    <h1>Olá Mundo</h1>,
-    document.getElementById('root')
-);  
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <h1 id='cliente' >Olá Mundo</h1>
+)

@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "babel": "babel src -d transpiled"
+    "dev": "babel src -d transpiled && webpack"
   },
   "devDependencies": {
     "@babel/cli": "^7.26.4",
