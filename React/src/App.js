@@ -1,10 +1,12 @@
 import React from "react"
 
+const category = 'Post da Semana'
+
 function App() {
     return (
         <>
-            <h1>Meu primeiro componente</h1>
-            <h2>Meu segundo componente</h2>
+            <h1>Blog Pessoal {Math.random()}</h1>
+            <h2>{category}</h2>
         </>
     )
 }
