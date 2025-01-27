@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack",
-    "build": "yarn init -y && yarn install"
+    "build": "yarn init -y && yarn install",
+    "server": "webpack serve"
   },
   "devDependencies": {
     "@babel/core": "^7.26.7",
