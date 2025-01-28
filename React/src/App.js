@@ -1,12 +1,22 @@
 import React from "react"
+import Post from './Post';
 
-const category = 'Post da Semana'
+const alerSpaciel = 'Alerta Especial'
 
 function App() {
     return (
         <>
-            <h1>Blog Pessoal {Math.random()}</h1>
-            <h2>{category}</h2>
+            <h1>Blog Pessoal</h1>
+            <h2>Post Da semana</h2>
+
+            <hr />
+
+            <Post 
+                post={{
+                    title: alerSpaciel,
+                    subtitle: "Subtitulo do alerta N° 1"
+                }}
+            />
         </>
     )
 }
