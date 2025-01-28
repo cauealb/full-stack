@@ -1,13 +1,17 @@
 import React from "react"
 import Post from './Post';
+import Header from "./Header";
 
 const alerSpaciel = 'Alerta Especial'
 
 function App() {
     return (
         <>
-            <h1>Blog Pessoal</h1>
-            <h2>Post Da semana</h2>
+            <Header title="Blog do Cauê">
+                <h2>Subtítulo do Cauê</h2>
+            </Header>
+
+            <Header title="Blog Outro"/>
 
             <hr />
 
