@@ -1,7 +1,8 @@
 import React from "react";
-import ReactDom from 'react-dom'
+import ReactDom from 'react-dom/client'
 
-React.render(
-    <h1>Olá Mundo!</h1>,
-    document.getElementById('root')
+const root = ReactDom.createRoot(document.getElementById('root'))
+
+root.render(
+    <h1>Olá React</h1>
 )
