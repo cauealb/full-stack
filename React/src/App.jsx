@@ -1,10 +1,12 @@
-import React, { Fragment } from "react";
+import React from "react";
+
+const category = 'Post da semana'
 
 export default function App() {
     return (
         <div>
-            <h1>Hello React</h1>
-            <span>Hello Fragment</span>
+            <h1>JStack's Blog</h1>
+            <span>{category}</span>
         </div>
     )
 }
