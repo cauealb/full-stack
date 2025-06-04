@@ -4,8 +4,8 @@ function Post(props) {
     return (
         <>
             <article>
-                <strong>{props.title}</strong> <br />
-                <small>{props.subtitle}</small>
+                <strong>{props.obj.title}</strong> <br />
+                <small>{props.obj.subtitle}</small>
             </article>
             <br />
         </>

@@ -12,16 +12,22 @@ export default function App() {
             <hr />
 
             <Post 
-                title="Post da linha 1"
-                subtitle={category}
+                obj={{
+                    title: "Post da linha 1",
+                    subtitle: "Subtexto da linha 1"
+                }}
             />
             <Post 
-                title="Post da linha 2"
-                subtitle="Subtexto da linha 2"
+                obj={{
+                    title: "Post da linha 2",
+                    subtitle: "Subtexto da linha 2"
+                }}
             />
             <Post 
-                title="Post da linha 3"
-                subtitle="Subtexto da linha 3"
+                obj={{
+                    title: "Post da linha 3",
+                    subtitle: "Subtexto da linha 3"
+                }}
             />
         </>
     )
