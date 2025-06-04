@@ -16,6 +16,7 @@ export default function App() {
                     title: "Post da linha 1",
                     subtitle: "Subtexto da linha 1"
                 }}
+                babatinha123="1...2...3"
             />
             <Post 
                 obj={{

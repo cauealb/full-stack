@@ -7,6 +7,7 @@ function Post(props) {
                 <strong>{props.obj.title}</strong> <br />
                 <small>{props.obj.subtitle}</small>
             </article>
+            <p>{props.babatinha123}</p>
             <br />
         </>
     )
