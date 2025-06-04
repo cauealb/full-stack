@@ -1,11 +1,15 @@
-function Post() {
+import React from "react"
+
+function Post(props) {
     return (
         <>
             <article>
-                <strong></strong>
-                <small></small>
+                <strong>{props.title}</strong> <br />
+                <small>{props.subtitle}</small>
             </article>
             <br />
         </>
     )
 }
+
+export default Post;
