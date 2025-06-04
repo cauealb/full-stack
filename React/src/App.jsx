@@ -13,7 +13,7 @@ export default function App() {
 
             <Post 
                 title="Post da linha 1"
-                subtitle="Subtexto da linha 1"
+                subtitle={category}
             />
             <Post 
                 title="Post da linha 2"
