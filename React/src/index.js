@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDom from 'react-dom/client'
 
-const root = ReactDom.createRoot(document.getElementById('root'))
+import App from "./App.jsx";
 
+const root = ReactDom.createRoot(document.getElementById('root'))
 root.render(
-    <h1>Olá Babel</h1>,
-    <span>Em produção</span>
+    <App />
 )
