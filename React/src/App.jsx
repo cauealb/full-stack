@@ -1,5 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 export default function App() {
-    return <h1>Criando primeiro componente em React</h1>
+    return (
+        <Fragment>
+            <h1>Hello React</h1>
+            <span>Hello Fragment</span>
+        </Fragment>
+    )
 }
