@@ -8,16 +8,24 @@ function Post(props) {
                 <strong>{props.obj.title}</strong> <br />
                 <small>{props.obj.subtitle}</small>
             </article>
+            Likes: {props.likes}
             <br />
         </>
     )
 }
 
-Post.propType = {
+Post.propTypes = {
     obj: PropsTypes.shape({
         title: PropsTypes.string.isRequired,
         subtitle: PropsTypes.number.isRequired
-    }) .isRequired
+    }).isRequired,
+    likes: PropsTypes.number.isRequired
+}
+
+Post.defaultPros ={
+    obj: PropsTypes.shape({
+        title: `Post da semana qualquer`
+    })
 }
 
 export default Post;
