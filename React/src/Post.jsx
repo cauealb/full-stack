@@ -1,4 +1,5 @@
 import React from "react"
+import PropsTypes from 'prop-types'
 
 function Post(props) {
     return (
@@ -7,10 +8,13 @@ function Post(props) {
                 <strong>{props.obj.title}</strong> <br />
                 <small>{props.obj.subtitle}</small>
             </article>
-            <p>{props.babatinha123}</p>
             <br />
         </>
     )
+}
+
+Post.PropType = {
+    
 }
 
 export default Post;
