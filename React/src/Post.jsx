@@ -13,7 +13,7 @@ function Post(props) {
     )
 }
 
-Post.PropType = {
+Post.propType = {
     obj: PropsTypes.shape({
         title: PropsTypes.string.isRequired,
         subtitle: PropsTypes.number.isRequired

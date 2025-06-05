@@ -14,7 +14,7 @@ export default function App() {
             <Post 
                 obj={{
                     title: "Post da linha 1",
-                    subtitle: "Subtexto da linha 1"
+                    subtitle: "20"
                 }}
             />
             <Post 
