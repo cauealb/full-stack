@@ -14,7 +14,10 @@ function Post(props) {
 }
 
 Post.PropType = {
-    
+    obj: PropsTypes.shape({
+        title: PropsTypes.string.isRequired,
+        subtitle: PropsTypes.number.isRequired
+    }) .isRequired
 }
 
 export default Post;
