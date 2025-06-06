@@ -7,7 +7,7 @@ const category = 'Post da semana'
 export default function App() {
     return (
         <>
-            <Header title="Futebol da globo">
+            <Header title={1}>
                 <span>{category}</span>
             </Header>
 

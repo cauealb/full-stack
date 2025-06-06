@@ -1,10 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Header({title, children}) {
     return (
         <>
-            {children}
             <h1>{title}</h1>
+            {children}
         </>
     )
+}
+
+Header.propType = {
+    title: PropTypes.string.isRequired,
 }
