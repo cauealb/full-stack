@@ -10,8 +10,8 @@ export default function App() {
             <h1>JStack's Blog</h1>
             <span>{category}</span>
 
-            <Header>
-                
+            <Header title="Futebol da globo">
+        
             </Header>
 
             <hr />
