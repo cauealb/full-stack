@@ -7,7 +7,7 @@ const category = 'Post da semana'
 export default function App() {
     return (
         <>
-            <Header title={1}>
+            <Header>
                 <span>{category}</span>
             </Header>
 

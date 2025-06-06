@@ -13,3 +13,7 @@ export default function Header({title, children}) {
 Header.propType = {
     title: PropTypes.string.isRequired,
 }
+
+Header.defaultProps = {
+    title: `Posts`
+}
