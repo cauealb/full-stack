@@ -7,11 +7,8 @@ const category = 'Post da semana'
 export default function App() {
     return (
         <>
-            <h1>JStack's Blog</h1>
-            <span>{category}</span>
-
             <Header title="Futebol da globo">
-        
+                <span>{category}</span>
             </Header>
 
             <hr />
