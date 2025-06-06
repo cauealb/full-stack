@@ -1,5 +1,6 @@
 import React from "react";
 import Post from "./Post.jsx";
+import Header from "./Header.jsx";
 
 const category = 'Post da semana'
 
@@ -8,6 +9,10 @@ export default function App() {
         <>
             <h1>JStack's Blog</h1>
             <span>{category}</span>
+
+            <Header>
+                
+            </Header>
 
             <hr />
 
