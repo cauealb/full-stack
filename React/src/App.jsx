@@ -4,6 +4,14 @@ import Header from "./Header.jsx";
 
 const category = 'Post da semana'
 
+const post = [
+    {title: "Título do post 1", subtitle: "Subtitle do Post 1", likes: 10},
+    {title: "Título do post 2", subtitle: "Subtitle do Post 2", likes: 5},
+    {title: "Título do post 3", subtitle: "Subtitle do Post 3", likes: 10},
+    {title: "Título do post 4", subtitle: "Subtitle do Post 4", likes: 12},
+    {title: "Título do post 5", subtitle: "Subtitle do Post 5", likes: 27},
+]
+
 export default function App() {
     return (
         <>
@@ -13,28 +21,7 @@ export default function App() {
 
             <hr />
 
-            <Post 
-                obj={{
-                    title: "Post da linha 1",
-                    subtitle: "20"
-                }}
-                // likes={10}
-            />
-            <Post 
-                obj={{
-                    // title: "Post da linha 2",
-                    subtitle: "Subtexto da linha 2"
-                }}
-                likes={10}
-            />
-            <Post 
-                obj={{
-                    title: "Post da linha 3",
-                    subtitle: "Subtexto da linha 3"
-                }}
-                likes={10}
-
-            />
+            {}
         </>
     )
 }
