@@ -12,6 +12,8 @@ export default function App() {
     {id:  Math.random(), title: "Título do post 4", subtitle: "Subtitle do Post 4", likes: 12},
     {id:  Math.random(), title: "Título do post 5", subtitle: "Subtitle do Post 5", likes: 27},
 ])
+    const [lengthPost, setLengthPost] = useState(post.length)
+    
 
     function handleNewPost() {
         const newPost = {
@@ -22,12 +24,13 @@ export default function App() {
         }
 
         setPost([...post, newPost])
+        setLengthPost(lengthPost + 1)
     }
 
 
     return (
         <>
-            <Header title="JStack">
+            <Header title={`Jstack   -  ${lengthPost}`}>
                 <span>{category}</span>
                 <button onClick={handleNewPost}>Adicionar novo post</button>
             </Header>
