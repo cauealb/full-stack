@@ -1,15 +1,14 @@
 import React from "react"
 import PropsTypes from 'prop-types'
 
-export default function Post(
-    {   obj, 
-        onRemove
-    }
-) {
+export default function Post({obj, onRemove}) {
     return (
         <>
             <article>
-                <strong>{obj.title}</strong> <br /> 
+                <strong>
+                    {obj.read ? <s>{obj.title}</s> : obj.title} 
+                </strong> 
+                <br /> 
                 <button onClick={() => onRemove(obj.id)}>Remover</button>
                 <br />
                 <small>{obj.subtitle}</small>
