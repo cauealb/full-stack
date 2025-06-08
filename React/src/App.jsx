@@ -21,7 +21,15 @@ export default function App() {
 
             <hr />
 
-            {}
+            {post.map(item => {
+                <Post 
+                    likes={item.likes}
+                    obj={{
+                        title: "Post da Semana",
+                        subtitle: "subtitle da semana"
+                    }}
+                />
+            })}
         </>
     )
 }
