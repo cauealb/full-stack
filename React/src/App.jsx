@@ -12,25 +12,28 @@ export default function App() {
     {id:  Math.random(), title: "Título do post 4", subtitle: "Subtitle do Post 4", likes: 12},
     {id:  Math.random(), title: "Título do post 5", subtitle: "Subtitle do Post 5", likes: 27},
 ])
-    const [lengthPost, setLengthPost] = useState(post.length)
     
 
     function handleNewPost() {
-        const newPost = {
-            id:  Math.random(), 
-            title: `Título do post ${post.length + 1}`, 
-            subtitle: `Subtitle do post ${post.length + 1}`,
-            likes: 10
-        }
-
-        setPost([...post, newPost])
-        setLengthPost(lengthPost + 1)
+        setTimeout(() => {
+            setPost((prevState) => (
+            [
+                ...prevState,
+                {
+                    id:  Math.random(), 
+                    title: `Título do post ${prevState.length + 1}`, 
+                    subtitle: `Subtitle do post ${prevState.length + 1}`,
+                    likes: 10
+                }
+            ]
+            ))
+        }, 2000)
     }
 
 
     return (
         <>
-            <Header title={`Jstack   -  ${lengthPost}`}>
+            <Header title={`Jstack`}>
                 <span>{category}</span>
                 <button onClick={handleNewPost}>Adicionar novo post</button>
             </Header>
