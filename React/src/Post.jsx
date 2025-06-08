@@ -1,14 +1,14 @@
 import React from "react"
 import PropsTypes from 'prop-types'
 
-function Post(props) {
+function Post({obj, likes}) {
     return (
         <>
             <article>
-                <strong>{props.obj.title}</strong> <br />
-                <small>{props.obj.subtitle}</small>
+                <strong>{obj.title}</strong> <br />
+                <small>{obj.subtitle}</small>
             </article>
-            Likes: {props.likes}
+            Likes: {likes}
             <br />
         </>
     )
