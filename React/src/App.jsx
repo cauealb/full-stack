@@ -15,19 +15,17 @@ export default function App() {
     
 
     function handleNewPost() {
-        setTimeout(() => {
-            setPost((prevState) => (
-            [
-                ...prevState,
-                {
-                    id:  Math.random(), 
-                    title: `Título do post ${prevState.length + 1}`, 
-                    subtitle: `Subtitle do post ${prevState.length + 1}`,
-                    likes: 10
-                }
-            ]
-            ))
-        }, 2000)
+        setPost((prevState) => (
+        [
+            ...prevState,
+            {
+                id:  Math.random(), 
+                title: `Título do post ${prevState.length + 1}`, 
+                subtitle: `Subtitle do post ${prevState.length + 1}`,
+                likes: 10
+            }
+        ]
+        ))
     }
 
 
