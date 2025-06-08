@@ -29,5 +29,4 @@ Post.propTypes = {
         read: PropsTypes.bool.isRequired,
     }).isRequired,
     onRemove: PropsTypes.func.isRequired,
-    likes: PropsTypes.number.isRequired
 }
