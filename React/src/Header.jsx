@@ -5,7 +5,7 @@ export default function Header({title, children}) {
     return (
         <>
             <h1>{title}</h1>
-            //Filho que é jogado dentro do componente
+            {/* //Filho que é jogado dentro do componente */}
             {children}
         </>
     )

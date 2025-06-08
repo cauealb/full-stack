@@ -23,11 +23,11 @@ export default function App() {
 
             {post.map(item => {
                 <Post 
-                    likes={item.likes}
                     obj={{
-                        title: "Post da Semana",
-                        subtitle: "subtitle da semana"
+                        title: `Post ${post.indexOf()}`,
+                        subtitle: `Subtitle ${post.indexOf()}`
                     }}
+                    likes={20}
                 />
             })}
         </>
