@@ -2,6 +2,10 @@ import React from "react"
 import PropsTypes from 'prop-types'
 
 export default function Post({obj, onRemove}) {
+    if(obj.read) {
+        return (<h1>Titlo Lido</h1>)
+    }
+
     return (
         <>
             <article>
