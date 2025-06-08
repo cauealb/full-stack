@@ -14,7 +14,16 @@ const post = [
 
 export default function App() {
     function handleNewPost() {
-        console.log("Clicou")
+        post.push(
+            {
+                id:  Math.random(), 
+                title: `Título do post ${post.length + 1}`, 
+                subtitle: `Subtitle do post ${post.length + 1}`, 
+                likes: 50
+            }
+        )
+
+        console.log(post)
     }
 
 
