@@ -29,7 +29,6 @@ export default function App() {
     }
 
     function handleRemovePost(id) {
-        console.log(id)
         setPost((state) => (
             state.filter(post => (
                 post.id !== id
