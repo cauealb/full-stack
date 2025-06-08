@@ -28,8 +28,13 @@ export default function App() {
         ))
     }
 
-    function handleRemovePost() {
-        console.log("Removeu")
+    function handleRemovePost(id) {
+        console.log(id)
+        setPost((state) => (
+            state.filter(post => (
+                post.id !== id
+            ))
+        ))
     }
 
 
@@ -46,6 +51,7 @@ export default function App() {
                 <Post 
                     key={item.id}
                     obj={{
+                        id: item.id,
                         title: item.title,
                         subtitle: item.subtitle
                     }}
