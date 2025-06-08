@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Post from "./Post.jsx";
 import Header from "./Header.jsx";
 
@@ -13,10 +13,16 @@ const post = [
 ]
 
 export default function App() {
+    function handleNewPost() {
+        console.log("Clicou")
+    }
+
+
     return (
         <>
             <Header title="JStack">
                 <span>{category}</span>
+                <button onClick={handleNewPost}>Adicionar novo post</button>
             </Header>
 
             <hr />
