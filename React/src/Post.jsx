@@ -4,18 +4,21 @@ import PropsTypes from 'prop-types'
 export default function Post({obj, onRemove}) {
     return (
         <>
-            <article>
-                <strong>
-                    {obj.read && <s>{obj.title}</s>}
-                    {!obj.read && obj.title}
-                </strong> 
-                <br /> 
-                <button onClick={() => onRemove(obj.id)}>Remover</button>
+            {obj.read ? 
+                <s><h1>{obj.title}</h1></s>
+            : <>
+                <article>
+                    <strong>
+                        {obj.title}
+                    </strong> 
+                    <br /> 
+                    <button onClick={() => onRemove(obj.id)}>Remover</button>
+                    <br />
+                    <small>{obj.subtitle}</small>
+                </article>
+                <p>Likes: {obj.likes}</p>
                 <br />
-                <small>{obj.subtitle}</small>
-            </article>
-            <p>Likes: {obj.likes}</p>
-            <br />
+            </>}
         </>
     )
 }
