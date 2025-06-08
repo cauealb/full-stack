@@ -21,15 +21,15 @@ export default function App() {
 
             <hr />
 
-            {post.map(item => {
+            {post.map(item => (
                 <Post 
                     obj={{
-                        title: `Post ${post.indexOf()}`,
-                        subtitle: `Subtitle ${post.indexOf()}`
+                        title: item.title,
+                        subtitle: item.subtitle
                     }}
-                    likes={20}
+                    likes={item.likes}
                 />
-            })}
+            ))}
         </>
     )
 }
