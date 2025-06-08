@@ -1,11 +1,13 @@
 import React from "react"
 import PropsTypes from 'prop-types'
 
-export default function Post({obj, likes}) {
+export default function Post({obj, likes, onRemove}) {
     return (
         <>
             <article>
-                <strong>{obj.title}</strong> <br />
+                <strong>{obj.title}</strong> <br /> 
+                <button onClick={onRemove}>Remover</button>
+                <br />
                 <small>{obj.subtitle}</small>
             </article>
             <p>Likes: {likes}</p>

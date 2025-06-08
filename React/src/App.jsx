@@ -28,6 +28,10 @@ export default function App() {
         ))
     }
 
+    function handleRemovePost() {
+        console.log("Removeu")
+    }
+
 
     return (
         <>
@@ -45,6 +49,7 @@ export default function App() {
                         title: item.title,
                         subtitle: item.subtitle
                     }}
+                    onRemove={handleRemovePost}
                     likes={item.likes}
                 />
             ))}
