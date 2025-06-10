@@ -13,7 +13,13 @@ export default function App() {
     {id: Math.random(), title: "Título do post 3", subtitle: "Subtitle do Post 3", likes: 10, read: false},
     {id: Math.random(), title: "Título do post 4", subtitle: "Subtitle do Post 4", likes: 12, read: true},
 ])
-    
+    const [theme, setTheme] = useState('dark')
+
+    function toggleContextTheme() {
+        setTheme((state) => (
+            state === 'dark' ? 'light' : 'dark'
+        ))
+    }
 
     function handleNewPost() {
         setPost((prevState) => (
