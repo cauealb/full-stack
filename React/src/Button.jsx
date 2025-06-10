@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import { ContextProvider } from "./App.jsx";
+import { Context } from "./Context.jsx";
 
 export default function Button(props) {
-    const { theme } = useContext(ContextProvider)
+    const { theme } = useContext(Context)
 
     return (
         <button 

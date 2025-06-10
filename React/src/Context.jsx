@@ -1,8 +1,8 @@
 import React, {createContext, useState} from "react";
 
-export const ThemeProvider =  createContext('dark')
+export const Context =  createContext('dark')
 
-export default function Context(props) {
+export function ThemeProvider(props) {
     const [theme, setTheme] = useState('dark');
 
     function toggleContextTheme() {
@@ -12,11 +12,11 @@ export default function Context(props) {
     }
 
     return (
-        <ThemeProvider.Provider value={{
+        <Context.Provider value={{
             theme, 
             toggleContextTheme: toggleContextTheme
         }}>
             {props.children}
-        </ThemeProvider.Provider>
+        </Context.Provider>
     );
 }
