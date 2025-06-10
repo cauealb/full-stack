@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import PropsTypes from 'prop-types'
 import PostHeader from "./PostHeader.jsx"
 
