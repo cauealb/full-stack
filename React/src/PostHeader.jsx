@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Button from "./Button.jsx";
 
 export default function PostHeader(props) {
     return (
@@ -7,6 +8,12 @@ export default function PostHeader(props) {
             <strong>
                 {props.obj.read ? <s>{props.obj.title}</s> : props.obj.title}
             </strong> 
+            <Button 
+                id={props.id}
+                onRemove={props.onRemove}
+            >
+                Remover
+            </Button>
         </>
     );
 }

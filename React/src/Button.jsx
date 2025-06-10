@@ -6,11 +6,13 @@ export default function Button(props) {
         <button 
             onClick={() => props.onRemove(props.obj.id)}
         >
-            Remover    
+            {props.children}    
         </button>
     );
 }
 
 Button.PropTypes = {
+    children: PropTypes.node.isRequired,
+    id: PropTypes.number.isRequired,
     onRemove: PropTypes.func.isRequired
 }
