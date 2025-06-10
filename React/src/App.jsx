@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 import Post from "./Post.jsx";
 import Header from "./Header.jsx";
 
 const category = 'Post da semana'
+
+const ContextProvider = createContext('dark')
 
 export default function App() {
     const [post, setPost] = useState([
@@ -36,7 +38,7 @@ export default function App() {
     }
 
     return (
-        <>
+        <ContextProvider.Provider value={}>
             <Header title={`Jstack`}>
                 <span>{category}</span>
                 <button onClick={handleNewPost}>Adicionar novo post</button>
