@@ -44,7 +44,7 @@ export default function App() {
     }
 
     return (
-        <ContextProvider.Provider value={}>
+        <ContextProvider.Provider value={theme}>
             <Header title={`Jstack`}>
                 <span>{category}</span>
                 <button onClick={handleNewPost}>Adicionar novo post</button>
@@ -59,6 +59,6 @@ export default function App() {
                     onRemove={handleRemovePost}
                 />
             ))}
-        </>
+        </ContextProvider.Provider>
     )
 }
