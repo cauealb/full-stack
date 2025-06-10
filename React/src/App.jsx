@@ -4,7 +4,7 @@ import Header from "./Header.jsx";
 
 const category = 'Post da semana'
 
-const ContextProvider = createContext('dark')
+export const ContextProvider = createContext('dark')
 
 export default function App() {
     const [post, setPost] = useState([
