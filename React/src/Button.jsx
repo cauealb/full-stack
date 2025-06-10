@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { ContextProvider } from "./App.jsx";
 
 export default function Button(props) {
-    const theme = useContext(ContextProvider)
+    const { theme } = useContext(ContextProvider)
 
     return (
         <button 

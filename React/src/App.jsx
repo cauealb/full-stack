@@ -46,11 +46,12 @@ export default function App() {
     console.log(theme)
 
     return (
-        <ContextProvider.Provider value={theme}>
-            <Header 
-                title={`Jstack`}
-                eventClickBtn={toggleContextTheme}
-            >
+        <ContextProvider.Provider 
+            value={{
+                theme,
+                toggleContextTheme: toggleContextTheme
+            }}>
+            <Header title={`Jstack`}>
                 <span>{category}</span>
                 <button onClick={handleNewPost}>Adicionar novo post</button>
             </Header>

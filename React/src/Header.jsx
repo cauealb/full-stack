@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Button from "./Button.jsx";
-
+import { ContextProvider } from "./App.jsx";
 export default function Header({title, children, eventClickBtn}) {
+    const { toggleContextTheme } = useContext(ContextProvider)
+
     return (
         <>
             <h1>{title}</h1>
             <Button 
-                onClick={eventClickBtn}
+                onClick={toggleContextTheme}
             >   
                 Alterar tema
             </Button>
