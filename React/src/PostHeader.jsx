@@ -8,9 +8,8 @@ export default function PostHeader(props) {
             <strong>
                 {props.obj.read ? <s>{props.obj.title}</s> : props.obj.title}
             </strong> 
-            <Button 
-                id={props.id}
-                onRemove={props.onRemove}
+            <Button
+                onRemove={() => props.onRemove(props.obj.id)}
             >
                 Remover
             </Button>
