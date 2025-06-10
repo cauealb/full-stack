@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Button from "./Button";
+import Button from "./Button.jsx";
 
-export default function Header({title, children}) {
+export default function Header({title, children, eventClickBtn}) {
     return (
         <>
             <h1>{title}</h1>
             <Button 
-                onClick={}
+                onClick={eventClickBtn}
             >   
                 Alterar tema
             </Button>

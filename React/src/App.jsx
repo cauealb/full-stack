@@ -43,6 +43,8 @@ export default function App() {
         ))
     }
 
+    console.log(theme)
+
     return (
         <ContextProvider.Provider value={theme}>
             <Header 

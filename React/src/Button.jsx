@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export default function Button(props) {
     return (
         <button 
-            onClick={props.onRemove}
+            onClick={props.onClick}
         >
             {props.children}    
         </button>
