@@ -1,6 +1,6 @@
 import React from "react"
 import PropsTypes from 'prop-types'
-import PostHeader from "./PostHeader"
+import PostHeader from "./PostHeader.jsx"
 
 export default function Post({obj, onRemove}) {
     return (
