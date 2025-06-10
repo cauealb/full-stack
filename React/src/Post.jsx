@@ -7,7 +7,12 @@ export default function Post({obj, onRemove}) {
         <>
             <article>
                 <PostHeader 
-                    
+                    obj={{
+                        id: obj.id,
+                        title: obj.title,
+                        read: obj.read
+                    }}
+                    onRemove={onRemove}
                 />
                 <br /> 
                 <br />
