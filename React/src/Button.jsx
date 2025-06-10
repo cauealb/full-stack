@@ -13,5 +13,5 @@ export default function Button(props) {
 
 Button.PropTypes = {
     children: PropTypes.node.isRequired,
-    onRemove: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired
 }

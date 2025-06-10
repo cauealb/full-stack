@@ -45,7 +45,10 @@ export default function App() {
 
     return (
         <ContextProvider.Provider value={theme}>
-            <Header title={`Jstack`}>
+            <Header 
+                title={`Jstack`}
+                eventClickBtn={toggleContextTheme}
+            >
                 <span>{category}</span>
                 <button onClick={handleNewPost}>Adicionar novo post</button>
             </Header>
