@@ -10,6 +10,7 @@ export default function Header({title, children, eventClickBtn}) {
             <h1>{title}</h1>
             <Button 
                 onClick={toggleContextTheme}
+                
             >   
                 Alterar tema
             </Button>

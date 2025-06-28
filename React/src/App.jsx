@@ -39,7 +39,15 @@ export default function App() {
         <ThemeProvider>
             <Header title={`Jstack`}>
                 <span>{category}</span>
-                <button onClick={handleNewPost}>Adicionar novo post</button>
+                <button 
+                  onClick={handleNewPost}
+                  style={{
+                    backgroundColor: 'yellow',
+                    outline: 'none',
+                    border: 'none'
+                  }}>
+                    Adicionar novo post
+                </button>
             </Header>
 
             <hr />
