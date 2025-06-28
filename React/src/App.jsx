@@ -42,9 +42,12 @@ export default function App() {
                 <button 
                   onClick={handleNewPost}
                   style={{
-                    backgroundColor: 'yellow',
+                    backgroundColor: 'black',
+                    color: '#fff',
                     outline: 'none',
-                    border: 'none'
+                    border: 'none',
+                    cursor: 'pointer',
+                    borderRadius: 8,
                   }}>
                     Adicionar novo post
                 </button>
