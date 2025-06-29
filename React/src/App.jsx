@@ -7,10 +7,10 @@ const category = 'Post da semana'
 
 export default function App() {
     const [post, setPost] = useState([
-    {id: Math.random(), title: "Título do post 1", subtitle: "Subtitle do Post 1", likes: 10, read: false},
-    {id: Math.random(), title: "Título do post 2", subtitle: "Subtitle do Post 2", likes: 15, read: true},
-    {id: Math.random(), title: "Título do post 3", subtitle: "Subtitle do Post 3", likes: 10, read: false},
-    {id: Math.random(), title: "Título do post 4", subtitle: "Subtitle do Post 4", likes: 12, read: true},
+    {id: Math.random(), title: "Título do post 1", subtitle: "Subtitle do Post 1", likes: 10, read: false, removed: true},
+    {id: Math.random(), title: "Título do post 2", subtitle: "Subtitle do Post 2", likes: 15, read: true, removed: false},
+    {id: Math.random(), title: "Título do post 3", subtitle: "Subtitle do Post 3", likes: 10, read: false, removed: false},
+    {id: Math.random(), title: "Título do post 4", subtitle: "Subtitle do Post 4", likes: 12, read: true, removed: false},
 ])
 
     function handleNewPost() {
