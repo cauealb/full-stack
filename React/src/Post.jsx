@@ -31,6 +31,7 @@ Post.propTypes = {
         subtitle: PropsTypes.string.isRequired,
         likes: PropsTypes.number.isRequired,
         read: PropsTypes.bool.isRequired,
+        removed: PropsTypes.bool.isRequired,
     }).isRequired,
     onRemove: PropsTypes.func.isRequired,
 }
