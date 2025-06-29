@@ -3,6 +3,8 @@ body {
     color: white;
 }
 
-.title {
-    color: yellow;
+$hero: yellow;
+
+h1 {
+    color: $hero;
 }
