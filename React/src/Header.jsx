@@ -3,10 +3,6 @@ import PropTypes from "prop-types";
 import Button from "./Button.jsx";
 import { Context } from "./Context.jsx";
 
-import style from './Header.css'
-
-console.log(style)
-
 export default function Header({title, children, eventClickBtn}) {
     const { toggleContextTheme } = useContext(Context)
 
