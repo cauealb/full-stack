@@ -24,18 +24,20 @@ module.exports = {
                 use: 'babel-loader'
             },
             {
-                test: /\.css$/,
-                exclude: /node_modules/,    
+                test: /\.css$/,   
                 use: [
                     'style-loader',
                     {
                         loader: 'css-loader',
                         options: {
-                            module: true
+                            modules: true,
                         }
                     }
                 ]
             }
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.json', '.css']
     }
 }

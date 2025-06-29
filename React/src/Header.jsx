@@ -2,15 +2,20 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Button from "./Button.jsx";
 import { Context } from "./Context.jsx";
+
+import style from './Header.css'
+
+console.log(style)
+
 export default function Header({title, children, eventClickBtn}) {
     const { toggleContextTheme } = useContext(Context)
 
     return (
         <>
-            <h1>{title}</h1>
+            <h1 >{title}</h1>
             <Button 
                 onClick={toggleContextTheme}
-                
+
             >   
                 Alterar tema
             </Button>
