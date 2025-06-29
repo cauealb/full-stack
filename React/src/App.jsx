@@ -28,12 +28,6 @@ export default function App() {
     }
 
     function handleRemovePost(id) {
-        // setPost((state) => (
-        //     state.filter(post => (
-        //         post.id !== id
-        //     ))
-        // ))
-
         setPost(state => (
             state.map(item => (
                 item.id === id ? {...item, removed: true} : item
