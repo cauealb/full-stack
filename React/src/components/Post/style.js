@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-
-export default subtitl = styled.span`
-    opacity: 0.7;
+export const SubTitle = styled.small`
+  opacity: 0.3;
+  color: red;
+  background-color: yellow
 `;

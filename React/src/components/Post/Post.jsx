@@ -1,6 +1,9 @@
 import React, { useContext } from "react"
 import PropsTypes from 'prop-types'
 import PostHeader from "./PostHeader.jsx"
+import { SubTitle } from "./style.js"
+
+
 
 export default function Post({obj, onRemove}) {
     return (
@@ -16,7 +19,7 @@ export default function Post({obj, onRemove}) {
                 />
                 <br /> 
                 <br />
-                <small>{obj.subtitle}</small>
+                <SubTitle>{obj.subtitle}</SubTitle>
             </article>
             <p>Likes: {obj.likes}</p>
             <br />
