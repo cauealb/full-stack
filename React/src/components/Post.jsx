@@ -2,13 +2,10 @@ import React, { useContext } from "react"
 import PropsTypes from 'prop-types'
 import PostHeader from "./PostHeader.jsx"
 
-import style from './Post.module.scss';
-console.log(style)
-
 export default function Post({obj, onRemove}) {
     return (
         <>
-            <article className={style.post}>
+            <article>
                 <PostHeader 
                     obj={{
                         id: obj.id,
