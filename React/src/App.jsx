@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Post from "./Post/Post.jsx";
-import Header from "./Header/Header.jsx";
-import { ThemeProvider } from "./context/Context.jsx";
+import Post from "./components/Post/Post.jsx";
+import Header from "./components/Header/Header.jsx";
+import { ThemeProvider } from "./components/context/Context.jsx";
 
-import { Title } from "./style.js";
+import { Title } from "./components/style.js";
 
 const category = "Post da semana";
 
