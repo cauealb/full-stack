@@ -8,7 +8,7 @@ import { Container, SubTitle } from "./style.js"
 export default function Post({obj, onRemove}) {
     return (
         <>
-            <Container>
+            <Container removed={obj.removed}>
                 <PostHeader 
                     obj={{
                         id: obj.id,
