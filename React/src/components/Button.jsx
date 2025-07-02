@@ -2,19 +2,17 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Context } from "./Context.jsx";
 
+import BtnStyle from './Button.js';
+
 export default function Button(props) {
     const { theme } = useContext(Context)
 
     return (
-        <button 
+        <BtnStyle 
             onClick={props.onClick}
-            style={{
-                color: theme === 'dark' ? "#fff" : "#000",
-                backgroundColor: theme === 'dark' ? "#000" : "#fff"
-            }}
         >
             {props.children}    
-        </button>
+        </BtnStyle>
     );
 }
 
