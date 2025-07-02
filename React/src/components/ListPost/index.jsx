@@ -5,7 +5,7 @@ import { Container, SubTitle } from "./style.js"
 
 
 
-export default function Post({obj, onRemove}) {
+export default function ListPost({obj, onRemove}) {
     return (
         <>
             <Container removed={obj.removed}>
