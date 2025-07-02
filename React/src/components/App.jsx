@@ -3,6 +3,8 @@ import Post from "./Post/Post.jsx";
 import Header from "./Header/Header.jsx";
 import { ThemeProvider } from "./context/Context.jsx";
 
+import Title from './Title.js';
+
 const category = "Post da semana";
 
 export default function App() {
@@ -62,7 +64,9 @@ export default function App() {
   return (
     <ThemeProvider>
       <Header title={`Jstack`}>
-        <span>{category}</span>
+        <Title as="span">
+            {category}  
+        </Title>
         <button
           onClick={handleNewPost}
           style={{
