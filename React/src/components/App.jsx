@@ -3,7 +3,7 @@ import Post from "./Post/Post.jsx";
 import Header from "./Header/Header.jsx";
 import { ThemeProvider } from "./context/Context.jsx";
 
-import Title from './Title.js';
+import { Title } from "./style.js";
 
 const category = "Post da semana";
 
