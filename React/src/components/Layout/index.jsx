@@ -1,3 +1,4 @@
+import Footer from "../Footer";
 import Header from "../Header/Header";
 import ListPost from "../ListPost";
 
@@ -6,6 +7,7 @@ export default function Layout() {
     <>
       <Header />
       <ListPost />
+      <Footer />
     </>
   );
 }
