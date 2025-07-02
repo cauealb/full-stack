@@ -4,9 +4,9 @@ export const Container = styled.article`
   /* opacity: ${(props) => props.removed ? 0.5 : 1};
   color: ${(props) => props.removed ? '#ff0000' : '#fff'} */
 
-  ${(props) => `
-    opacity: ${props.removed ? 0.5 : 1};
-    color: ${props.removed ? '#ff0000' : '#fff'}
+  ${({ removed }) => css`
+    opacity: ${removed ? 0.5 : 1};
+    color: ${removed ? '#ff0000' : '#fff'}
   `}
 `;
 
