@@ -1,9 +1,10 @@
 import React from "react"
+import Container from './style.js'
 
-export default function ListPost({obj, onRemove}) {
+export default function Post({ title, description }) {
     return (
-        <>
+        <Container>
 
-        </>
+        </Container>
     )
 }
