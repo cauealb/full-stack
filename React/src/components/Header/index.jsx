@@ -1,10 +1,10 @@
+import React from "react"
 
-
-export default function Header({title, children, eventClickBtn}) {
+export default function Header() {
 
     return (
         <>
-
+            <h1>Ola</h1>
         </>
     )
 }
