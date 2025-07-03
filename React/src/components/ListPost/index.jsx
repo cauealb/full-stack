@@ -6,7 +6,9 @@ export default function Post() {
         <Container>
             {post.map(item => (
                 <Post 
-                    
+                    key={item.id}
+                    title={item.title}
+                    description={item.description}
                 />
             ))}
         </Container>
