@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
 export default styled.div`
-    margin: 10px
+    display: grid;
+    gap: 10px;
+    margin: 10px;
 `
