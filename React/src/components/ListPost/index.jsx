@@ -1,10 +1,12 @@
 import React from "react"
-import post from "./Post/post.js"
+import Post from "./Post"
+import arrPost from './Post/post.js'
+import Container from './style.js'
 
-export default function Post() {
+export default function ListPost() {
     return (
         <Container>
-            {post.map(item => (
+            {arrPost.map(item => (
                 <Post 
                     key={item.id}
                     title={item.title}

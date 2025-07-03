@@ -2,13 +2,13 @@ import React from "react";
 
 import Footer from "../Footer";
 import Header from "../Header";
-import Post from "../ListPost/Post";
+import ListPost from "../ListPost";
 
 export default function Layout() {
   return (
     <>
       <Header />
-      <Post />
+      <ListPost />
       <Footer />
     </>
   );
