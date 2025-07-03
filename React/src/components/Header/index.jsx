@@ -3,8 +3,9 @@ import React from "react"
 export default function Header() {
 
     return (
-        <>
-            <h1>Ola</h1>
-        </>
+        <header>
+            <h1>JStack's Blog</h1>
+            <button type="button"></button>
+        </header>
     )
 }
