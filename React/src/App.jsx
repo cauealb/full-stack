@@ -8,7 +8,7 @@ import theme from "./style/theme/index.js";
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme.light}>
       <GlobalSyle />
       <Layout />
     </ThemeProvider>
