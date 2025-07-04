@@ -10,6 +10,6 @@ export default styled.div`
     }
 
     span {
-        color: #ccc
+        color: ${({ theme }) => theme.textColorPost}
     }
 `;
