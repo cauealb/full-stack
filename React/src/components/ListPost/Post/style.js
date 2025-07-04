@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.div`
-    background-color:rgb(71, 71, 71);
+    background-color: ${({ theme }) => theme.postBackgroundColor};
     padding: 10px;
     border-radius: 8px;
 

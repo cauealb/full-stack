@@ -7,5 +7,6 @@ export default {
     headerBackgroundColor: '#1112',
     footerBackgroundColor: '#1112',
     textBackgroundColor: '#033', 
-    btnBackgroundColor: '#bbb'
+    btnBackgroundColor: '#bbb',
+    postBackgroundColor: '#dddddd'
 }
