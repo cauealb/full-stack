@@ -2,7 +2,6 @@ import React from "react"
 import Container from './style.js'
 
 export default function Header({ onToggleTheme, themes }) {
-    console.log(themes)
     return (
         <Container>
             <h1>JStack's Blog</h1>
