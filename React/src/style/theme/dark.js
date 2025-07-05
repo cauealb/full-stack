@@ -8,5 +8,6 @@ export default {
     footerBackgroundColor: '#333',
     textBackgroundColor: '#ccc', 
     btnBackgroundColor: 'white',
-    postBackgroundColor: '#444' 
+    postBackgroundColor: '#444',
+    textColorPost: 'white'
 }
