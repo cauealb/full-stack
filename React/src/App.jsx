@@ -7,14 +7,16 @@ import { ThemeProvider } from "styled-components";
 import theme from "./style/theme/index.js";
 
 export default function App() {
-  const [theme, setTheme] = useState('dark')
+  const [themes, setThemes] = useState('dark')
 
-  const currenTheme = useMemo(() => {
-    
-  }, [theme])
+  const currentTheme = useMemo(() => {
+    return theme[themes] || theme.dark;
+  }, [themes])
+
+  console.log(currentTheme)
 
   return (
-    <ThemeProvider theme={theme.light}>
+    <ThemeProvider theme={currentTheme}>
       <GlobalSyle />
       <Layout />
     </ThemeProvider>
