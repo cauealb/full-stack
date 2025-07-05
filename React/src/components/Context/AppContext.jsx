@@ -1,4 +1,4 @@
-import React, { createContext } from "react"
+import React, { createContext, useContext } from "react"
 
 const Context = createContext({
     handleToggleTheme: () => {},
@@ -6,10 +6,15 @@ const Context = createContext({
 })
 
 export default function AppContext({ children }) {
+    const [themes, setThemes] = useContext('dark')
+
+    function handleToggleTheme() {
+        setThemes(state => state === 'dark' ? 'light' : 'dark')
+    }
 
     return (
-        <>
+        <Context value={}>
 
-        </>
+        </Context>
     )
 }
