@@ -15,13 +15,15 @@ export default function App() {
 
   function handleToggleTheme(){
     setThemes(state => state === 'dark' ? 'light' : 'dark');
-    console.log(themes)
   }
 
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalSyle />
-      <Layout onToggleTheme={handleToggleTheme} />
+      <Layout 
+        onToggleTheme={handleToggleTheme} 
+        themes={themes}
+      />
     </ThemeProvider>
   );
 }
