@@ -13,8 +13,11 @@ export default function AppContext({ children }) {
     }
 
     return (
-        <Context value={}>
-
+        <Context value={{
+            handleToggleTheme,
+            themes
+        }}>
+            {children}
         </Context>
     )
 }
