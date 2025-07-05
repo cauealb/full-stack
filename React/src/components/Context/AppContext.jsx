@@ -3,7 +3,7 @@ import React, { createContext, useMemo, useState } from "react"
 import { ThemeProvider } from "styled-components"
 import theme from "../../style/theme"
 
-const Context = createContext({
+export const Context = createContext({
     handleToggleTheme: () => {},
     themes: 'dark'
 })

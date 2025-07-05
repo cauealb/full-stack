@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Container from './style.js'
 
-export default function Footer() {
+import { Context } from "../Context/AppContext.jsx";
 
+export default function Footer() {
+    const { handleToggleTheme, themes } = useContext(Context)
     return (
         <Container>
             <span>JStack's Blog. Todos os direitos reservados.</span>
