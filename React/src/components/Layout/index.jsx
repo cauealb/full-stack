@@ -4,12 +4,12 @@ import Footer from "../Footer";
 import Header from "../Header";
 import ListPost from "../ListPost";
 
-export default function Layout() {
+export default function Layout({ onToggleTheme }) {
   return (
     <>
-      <Header />
-      <ListPost />
-      <Footer />
+        <Header onToggleTheme={onToggleTheme} />
+        <ListPost />
+        <Footer onToggleTheme={onToggleTheme} />
     </>
   );
 }

@@ -14,13 +14,14 @@ export default function App() {
   }, [themes])
 
   function handleToggleTheme(){
-    setThemes(state => state === 'dark' ? 'ligth' : 'dark');
+    setThemes(state => state === 'dark' ? 'light' : 'dark');
+    console.log(themes)
   }
 
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalSyle />
-      <Layout />
+      <Layout onToggleTheme={handleToggleTheme} />
     </ThemeProvider>
   );
 }
