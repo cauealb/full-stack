@@ -13,7 +13,9 @@ export default function App() {
     return theme[themes] || theme.dark;
   }, [themes])
 
-  console.log(currentTheme)
+  function handleToggleTheme(){
+    setThemes(state => state === 'dark' ? 'ligth' : 'dark');
+  }
 
   return (
     <ThemeProvider theme={currentTheme}>
