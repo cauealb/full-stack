@@ -24,7 +24,9 @@ export default function AppContext({ children }) {
             handleToggleTheme,
             themes
         }}>
-            {children}
+            <ThemeProvider theme={currentTheme}>
+                {children}
+            </ThemeProvider>
         </Context>
     )
 }
