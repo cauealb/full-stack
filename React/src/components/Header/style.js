@@ -15,8 +15,8 @@ export default styled.header`
     button {
         background-color: ${({ theme }) => theme.btnBackgroundColor};
         border: none;
-        border-radius: 4px;
-        padding: 10px;
+        border-radius: ${({ theme }) => theme.borderRadius};
+        padding: ${({ theme }) => theme.spacing.small};
         cursor: pointer;
     }
 `;
