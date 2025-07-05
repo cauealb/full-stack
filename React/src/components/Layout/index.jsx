@@ -6,8 +6,6 @@ import ListPost from "../ListPost";
 import { useTheme } from "styled-components";
 
 export default function Layout({ onToggleTheme, themes }) {
-  const theme = useTheme()
-
   return (
     <>
         <Header 
@@ -19,12 +17,6 @@ export default function Layout({ onToggleTheme, themes }) {
           onToggleTheme={onToggleTheme} 
           themes={themes}  
         />
-
-        <div style={{
-          marginTop: theme.spacing.large
-        }}>
-          Olá tudo bem?
-        </div>
     </>
   );
 }
