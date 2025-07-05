@@ -1,6 +1,11 @@
-import React from "react"
+import React, { createContext } from "react"
 
-export default function AppContext() {
+const Context = createContext({
+    handleToggleTheme: () => {},
+    themes: 'dark'
+})
+
+export default function AppContext({ children }) {
 
     return (
         <>
