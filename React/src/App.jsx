@@ -1,29 +1,16 @@
-import React, { useMemo, useState } from "react";
+import React from "react";
 
 import Layout from "./components/Layout";
 import GlobalSyle from './style/style.js'
 
-import { ThemeProvider } from "styled-components";
-import theme from "./style/theme/index.js";
+
+import AppContext from "./components/Context/AppContext.jsx";
 
 export default function App() {
-  const [themes, setThemes] = useState('dark')
-
-  const currentTheme = useMemo(() => {
-    return theme[themes] || theme.dark;
-  }, [themes])
-
-  function handleToggleTheme(){
-    setThemes(state => state === 'dark' ? 'light' : 'dark');
-  }
-
   return (
-    <ThemeProvider theme={currentTheme}>
+    <AppContext>
       <GlobalSyle />
-      <Layout 
-        onToggleTheme={handleToggleTheme} 
-        themes={themes}
-      />
-    </ThemeProvider>
-  );
+      <Layout />
+    </AppContext>
+  )
 }

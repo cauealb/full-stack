@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useMemo } from "react"
+import React, { createContext, useMemo, useState } from "react"
 
 import { ThemeProvider } from "styled-components"
 import theme from "../../style/theme"
@@ -9,7 +9,7 @@ const Context = createContext({
 })
 
 export default function AppContext({ children }) {
-    const [themes, setThemes] = useContext('dark')
+    const [themes, setThemes] = useState('dark')
 
     const currentTheme = useMemo(() => {
         return theme[themes] || theme.dark
