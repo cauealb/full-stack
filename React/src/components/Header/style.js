@@ -4,9 +4,9 @@ export default styled.header`
     display: flex;
     justify-content: space-between;
     background-color: ${({ theme }) => theme.headerBackgroundColor};
-    margin: 10px;
-    border-radius: 4px;
-    padding: 20px;
+    margin: ${({ theme }) => theme.spacing.small};
+    border-radius: ${({ theme }) => theme.borderRadius};
+    padding: ${({ theme }) => theme.spacing.large};
 
     h1 {
         color: ${({ theme }) => theme.textBackgroundColor}
