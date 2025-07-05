@@ -8,8 +8,10 @@ export default function Footer() {
     return (
         <Container>
             <span>JStack's Blog. Todos os direitos reservados.</span>
-            <button>
-                Mudar tema
+            <button 
+                onClick={handleToggleTheme}
+            >
+                {`Mudar tema para ${themes === 'dark' ? 'light' : 'dark'}`}
             </button>
         </Container>
     );
