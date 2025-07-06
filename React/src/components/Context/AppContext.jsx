@@ -22,7 +22,7 @@ export default function AppContext({ children }) {
 
     useEffect(() => {
         console.debug("Executou o useEffect!")
-    }, [])
+    })
 
     return (
         <Context value={{
