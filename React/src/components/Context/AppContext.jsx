@@ -21,7 +21,7 @@ export default function AppContext({ children }) {
 
     useEffect(() => {
         console.debug("Executou o useEffect!")
-    }, [])
+    }, [themes])
 
     return (
         <Context value={{
