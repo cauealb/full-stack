@@ -19,6 +19,13 @@ export default function AppContext({ children }) {
         setThemes(state => state === 'dark' ? 'light' : 'dark')
     }
 
+    useEffect(() => {
+
+        return () => {
+            console.debug('saiu!!!')
+        }
+    }, [themes])
+
     return (
         <Context value={{
             handleToggleTheme,
