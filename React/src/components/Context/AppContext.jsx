@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useLayoutEffect, useMemo, useState } from "react"
+import React, { createContext, useEffect, useMemo, useState } from "react"
 
 import { ThemeProvider } from "styled-components"
 import theme from "../../style/theme"
@@ -18,12 +18,6 @@ export default function AppContext({ children }) {
     function handleToggleTheme() {
         setThemes(state => state === 'dark' ? 'light' : 'dark')
     }
-
-    useLayoutEffect(() => {
-        for(let i = 0; i <= 15000; i++) {
-            console.debug(i)
-        }
-    }, [themes])
 
     return (
         <Context value={{
