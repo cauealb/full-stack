@@ -25,7 +25,7 @@ export default function AppContext({ children }) {
             themes
         }}>
             <ThemeProvider theme={currentTheme}>
-                {children}
+                {themes === 'dark' ? children : ''}
             </ThemeProvider>
         </Context>
     )
