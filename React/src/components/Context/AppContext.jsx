@@ -22,7 +22,7 @@ export default function AppContext({ children }) {
 
     useEffect(() => {
         console.debug("Executou o useEffect!")
-    }, [themes])
+    }, [])
 
     return (
         <Context value={{
@@ -30,7 +30,7 @@ export default function AppContext({ children }) {
             themes
         }}>
             <ThemeProvider theme={currentTheme}>
-                <button onClick={}>Teste</button>
+                <button onClick={() => setQualquer(Math.random())}>Teste</button>
                 {children}
             </ThemeProvider>
         </Context>
