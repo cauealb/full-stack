@@ -9,8 +9,7 @@ export const Context = createContext({
 })
 
 export default function AppContext({ children }) {
-    const [themes, setThemes] = useState('dark')
-    const render = useRef(true);
+    const [themes, setThemes] = useState('dark');
 
     const currentTheme = useMemo(() => {
         return theme[themes] || theme.dark
@@ -20,22 +19,14 @@ export default function AppContext({ children }) {
         setThemes(state => state === 'dark' ? 'light' : 'dark')
     }
 
-    useEffect(() => {
-        if(render.current) {
-            render.current = false
-            return
-        }
-
-        console.debug('Segunda renderização!');
-    }, [themes])
-
     return (
         <Context value={{
             handleToggleTheme,
             themes
         }}>
             <ThemeProvider theme={currentTheme}>
-                {children}
+                <button onClick={handleToggleTheme} >Toggle</button>
+                {themes === 'dark' && children}
             </ThemeProvider>
         </Context>
     )
