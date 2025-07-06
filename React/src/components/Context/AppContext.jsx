@@ -10,6 +10,7 @@ export const Context = createContext({
 
 export default function AppContext({ children }) {
     const [themes, setThemes] = useState('dark')
+    const [qualquer, setQualquer] = useState(123)
 
     const currentTheme = useMemo(() => {
         return theme[themes] || theme.dark
@@ -29,6 +30,7 @@ export default function AppContext({ children }) {
             themes
         }}>
             <ThemeProvider theme={currentTheme}>
+                <button onClick={}>Teste</button>
                 {children}
             </ThemeProvider>
         </Context>
