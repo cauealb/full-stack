@@ -25,8 +25,7 @@ export default function AppContext({ children }) {
             themes
         }}>
             <ThemeProvider theme={currentTheme}>
-                <button onClick={handleToggleTheme} >Toggle</button>
-                {themes === 'dark' && children}
+                {children}
             </ThemeProvider>
         </Context>
     )
