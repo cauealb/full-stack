@@ -10,7 +10,6 @@ export const Context = createContext({
 
 export default function AppContext({ children }) {
     const [themes, setThemes] = useState('dark')
-    const [qualquer, setQualquer] = useState(123)
 
     const currentTheme = useMemo(() => {
         return theme[themes] || theme.dark
@@ -20,17 +19,12 @@ export default function AppContext({ children }) {
         setThemes(state => state === 'dark' ? 'light' : 'dark')
     }
 
-    useEffect(() => {
-        console.debug("Executou o useEffect!")
-    })
-
     return (
         <Context value={{
             handleToggleTheme,
             themes
         }}>
             <ThemeProvider theme={currentTheme}>
-                <button onClick={() => setQualquer(Math.random())}>Teste</button>
                 {children}
             </ThemeProvider>
         </Context>
