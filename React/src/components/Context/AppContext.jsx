@@ -1,4 +1,4 @@
-import React, { createContext, useMemo, useState } from "react"
+import React, { createContext, useEffect, useMemo, useState } from "react"
 
 import { ThemeProvider } from "styled-components"
 import theme from "../../style/theme"
@@ -18,6 +18,10 @@ export default function AppContext({ children }) {
     function handleToggleTheme() {
         setThemes(state => state === 'dark' ? 'light' : 'dark')
     }
+
+    useEffect(() => {
+        console.debug("Executou o useEffect!")
+    })
 
     return (
         <Context value={{
